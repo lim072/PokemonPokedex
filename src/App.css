@@ -212,7 +212,7 @@ body{
 .poke .pokeBody .arrow .rightArrow .inArrow{
   width: 90px;
   height: 90px;
-  background-color: #05302d;
+  background-color: #444;
   position: relative;
   top: 4px;
   left: 7px;
@@ -232,7 +232,7 @@ body{
 .poke .pokeBody .arrow .home{
   width: 100px;
   height: 100px;
-  background-color: #05302d;
+  background-color: #444;
   border: 2px solid #000;
   border-radius: 50px;
   text-align: center;

@@ -26,7 +26,11 @@ function App() {
       <div className="pokeBody">
         <div className='frame'>
           <div className='screen'>
-  
+            <div className='screenDefault'>
+              <div className='top'>
+                <span></span>
+              </div>
+            </div>
           </div>
         </div>
         
