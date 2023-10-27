@@ -11,7 +11,7 @@ const Pokedex = () => {
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`);
         const speciesResponse = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${i}`);
         const koreanName = speciesResponse.data.names.find(name => name.language.name === 'ko');
-        allPokemonData.push({ ...response.data, korean_name: koreanName.name });
+        allPokemonData.push({ ...response.data, korean_name: koreanName.name});
       }
       setPokemonData(allPokemonData);
     };
@@ -21,10 +21,11 @@ const Pokedex = () => {
 
   const renderPokemonList = () => {
     return pokemonData.map((pokemon) => (
-      <div key={pokemon.id}>
+      <div className='sub' key={pokemon.id}>
         <img src={pokemon.sprites.front_default} alt={pokemon.korean_name} />
+        <p>No.{pokemon.id}</p>
         <p>{pokemon.korean_name}</p>
-        <p>번호: No.{pokemon.id}</p>
+    
       </div>
     ));
   };

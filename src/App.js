@@ -42,7 +42,7 @@ function App() {
         <div className='search'>
           <input type='text' placeholder='검색어 입력'></input>
           <button>
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         
