@@ -148,7 +148,7 @@ body{
 .poke .pokeBody .frame .screen{
   width: 100%;
   height: 100%;
-  background-color: rgba(106, 255, 106, 0.3);
+  background-color: #fff;
   border-radius: 5px;
   border: 2px solid #555;
   box-shadow: 1px 1px 20px 20px rgba(255, 255, 255, 0.5);
@@ -191,16 +191,15 @@ body{
   gap: 10px;
   display: flex;
   align-items: center;
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.2);
 }
 .poke .pokeBody .frame .screen .screenMain >div .sub:nth-of-type(even){
-  background-color: rgba(0, 60, 255, 0.5);
+  background-color: rgba(0, 60, 255, 0.2);
 }
 .poke .pokeBody .frame .screen .screenMain >div .sub p{
-  font-size: 11px;
-  color: #ddd;
-  font-weight: bold;
-  
+  font-size: 12px;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(48, 48, 44);
 }
 .poke .pokeBody .search{
   width: 436px;
