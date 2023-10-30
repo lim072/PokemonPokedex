@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Home from './Home';
 
 const Pokedex = () => {
   const [pokemonData, setPokemonData] = useState([]);
-
+  const [PokemonHome, pokemonOn] = useState([<Home />]);
+  const [selectedPokemon, setSelectedPokemon] = useState(null); 
   useEffect(() => {
     const fetchData = async () => {
       const allPokemonData = [];
@@ -19,22 +21,32 @@ const Pokedex = () => {
     fetchData();
   }, []);
 
+  const handlePokemonClick = (pokemon) => {
+    setSelectedPokemon(pokemon);
+    
+  };
   const renderPokemonList = () => {
     return pokemonData.map((pokemon) => (
-      <div className='sub' key={pokemon.id}>
+      <div className='sub' key={pokemon.id} onClick={() => pokemonOn(handlePokemonClick(pokemon))}>
         <img src={pokemon.sprites.front_default} alt={pokemon.korean_name} />
+        <div className='textBox'>
         <p>No.{pokemon.id}</p>
         <p>{pokemon.korean_name}</p>
-    
+        </div>
       </div>
     ));
   };
+console.log(handlePokemonClick);
 
   return (
-    <div>
-      {renderPokemonList()}
+    <div className='screenMain'>
+      {PokemonHome}
+      <div>
+        {renderPokemonList()}
+      </div>
     </div>
   );
 };
+
 
 export default Pokedex;

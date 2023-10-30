@@ -1,8 +1,9 @@
 import './App.css';
-import Pokedex from './components/pokedex';
+import Pokedex from './components/Pokedex';
+
 
 function App() {
-  return (
+  return ( 
     <main className="poke">
       <div className="pokeHeader">
         <ul>
@@ -29,13 +30,12 @@ function App() {
           <div className='screen'>
             <div className='screenDefault'>
               <div className='top'>
-                <div className='ball'></div>
                 <span>Pokemon Pokédex</span>
               </div>
             </div>
-            <div className='screenMain'>
-              <Pokedex /> 
-            </div>
+
+                <Pokedex /> 
+     
           </div>
         </div>
         
